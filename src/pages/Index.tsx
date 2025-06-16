@@ -19,7 +19,7 @@ const Index = () => {
         {/* Hero Section */}
         <section
           id="hero"
-          className="relative flex items-center justify-center h-screen w-full overflow-hidden px-4 rounded-b-[45px]"
+          className="relative flex items-center justify-center h-screen w-full overflow-hidden px-4 rounded-b-[0px]"
         >
           {/* Background with Spline */}
           <div className="absolute inset-0 z-0 flex justify-end items-center">
@@ -45,7 +45,7 @@ const Index = () => {
               <AnimatedSection delay={200} direction="fade">
                 <span className="inline-flex items-center gap-2 text-xs font-medium bg-white/10 rounded-full px-4 py-1 mb-6 text-white border border-white/20 shadow-sm">
                   <span className="w-2 h-2 bg-green-400 rounded-full animate-pulse" />
-                  Seed Capital was closed
+                  In Seed Raise Mode 🚀
                 </span>
               </AnimatedSection>
 
@@ -73,22 +73,24 @@ const Index = () => {
               {/* SUBTITLE (TWO LINES, 20px, LEFT ALIGNED) */}
               <AnimatedSection delay={600} direction="up">
                 <div
-                  className="mb-7 text-left"
+                  className="mb-7 text-left max-w-[550px]"
                   style={{
                     fontSize: 'clamp(16px, 2.5vw, 20px)',
-                    color: '#e5e7eb',
                     lineHeight: 1.35,
                     fontWeight: 400,
                     marginBottom: '18px',
-                    maxWidth: 550,
+                    background:
+                      'linear-gradient(90deg,hsl(152, 95.50%, 43.90%) 0%,hsl(270, 93.40%, 70.40%) 50%, #ffffff 100%)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text',
+                    color: 'transparent',
                   }}
                 >
                   <p>
-                    Our AI-powered tool generates professional, personalized
-                    cover letters
-                  </p>
-                  <p>
-                    to help you land your dream job. No more writer's block.
+                    Get noticed with AI-powered cover letter crafted
+                    effortlessly to land your interviews. No more writer’s
+                    block, just results.
                   </p>
                 </div>
               </AnimatedSection>
@@ -106,14 +108,14 @@ const Index = () => {
                     }}
                   >
                     <span className="inline-flex items-center gap-2 rounded-full bg-green-400 text-white px-7 py-3 font-semibold text-base shadow-lg hover:bg-green-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl w-full sm:w-auto justify-center">
-                      GET STARTED 🡥
+                      CREATE ONE 🡥
                     </span>
                   </a>
                   <a
                     href="mailto:briandev007@gmail.com"
                     className="inline-flex items-center gap-2 rounded-full px-7 py-3 font-semibold text-base bg-white/10 border border-white/20 text-white hover:bg-white/20 transition-all duration-300 hover:-translate-y-1 w-full sm:w-auto justify-center"
                   >
-                    Contact
+                    SAY HI 👋
                   </a>
                 </div>
               </AnimatedSection>
