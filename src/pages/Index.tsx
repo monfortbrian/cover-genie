@@ -1,4 +1,3 @@
-
 import { useEffect } from 'react';
 import CoverLetterForm from '@/components/CoverLetterForm';
 import Navbar from '@/components/Navbar';
@@ -20,19 +19,23 @@ const Index = () => {
         {/* Hero Section */}
         <section
           id="hero"
-          className="relative h-screen overflow-hidden flex items-center justify-center"
-          style={{ minHeight: '100vh' }}
+          className="relative flex items-center justify-center h-screen w-full overflow-hidden px-4 rounded-b-[45px]"
         >
-          <div className="absolute inset-0">
-            <img
-              src={bg}
-              alt="Professional document on a desk"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/80" />
+          {/* Background with Spline */}
+          <div className="absolute inset-0 z-0 flex justify-end items-center">
+            <div className="absolute inset-0 bg-black z-0" />
+            <div className="w-[100vw] h-[100vh] z-10">
+              <iframe
+                src="https://my.spline.design/untitled-n5pwkJkhyJk8rt6sKEeWfUpQ/"
+                frameBorder="0"
+                width="150%"
+                height="150%"
+                className="w-full h-full"
+              ></iframe>
+            </div>
           </div>
-          
-          {/* CONTENT LEFT-ALIGNED */}
+
+          {/* Centered Hero Content */}
           <div className="relative z-10 w-full max-w-7xl mx-auto flex px-4 sm:px-6 lg:px-8">
             <div
               className="flex flex-col justify-center items-start w-full max-w-2xl"
@@ -81,21 +84,25 @@ const Index = () => {
                   }}
                 >
                   <p>
-                    Our AI-powered tool generates professional, personalized cover
-                    letters
+                    Our AI-powered tool generates professional, personalized
+                    cover letters
                   </p>
-                  <p>to help you land your dream job. No more writer's block.</p>
+                  <p>
+                    to help you land your dream job. No more writer's block.
+                  </p>
                 </div>
               </AnimatedSection>
 
               {/* BUTTONS */}
               <AnimatedSection delay={800} direction="up">
                 <div className="flex flex-col sm:flex-row gap-4 mb-8 w-full sm:w-auto">
-                  <a 
+                  <a
                     href="#generate"
                     onClick={(e) => {
                       e.preventDefault();
-                      document.getElementById('generate')?.scrollIntoView({ behavior: 'smooth' });
+                      document
+                        .getElementById('generate')
+                        ?.scrollIntoView({ behavior: 'smooth' });
                     }}
                   >
                     <span className="inline-flex items-center gap-2 rounded-full bg-green-400 text-white px-7 py-3 font-semibold text-base shadow-lg hover:bg-green-500 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl w-full sm:w-auto justify-center">
@@ -127,13 +134,16 @@ const Index = () => {
             <div className="flex-1" />
           </div>
         </section>
-
         {/* FORM SECTION */}
         <section
           id="generate"
           className="flex flex-col items-center justify-center min-h-screen px-4 bg-gray-50/50 py-24"
         >
-          <AnimatedSection delay={200} direction="up" className="text-center mb-12">
+          <AnimatedSection
+            delay={200}
+            direction="up"
+            className="text-center mb-12"
+          >
             <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 tracking-tight">
               Generate Your Letter in Seconds
             </h2>
@@ -142,8 +152,12 @@ const Index = () => {
               letter for you.
             </p>
           </AnimatedSection>
-          
-          <AnimatedSection delay={400} direction="up" className="w-full max-w-2xl">
+
+          <AnimatedSection
+            delay={400}
+            direction="up"
+            className="w-full max-w-2xl"
+          >
             <CoverLetterForm />
           </AnimatedSection>
         </section>
