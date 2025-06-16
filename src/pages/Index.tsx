@@ -5,6 +5,8 @@ import Footer from '@/components/Footer';
 import LogoCarousel from '@/components/LogoCarousel';
 import AnimatedSection from '@/components/AnimatedSection';
 import bg from '../images/background.jpg';
+import Spline from '@splinetool/react-spline';
+
 
 const Index = () => {
   useEffect(() => {
@@ -22,18 +24,12 @@ const Index = () => {
           className="relative flex items-center justify-center h-screen w-full overflow-hidden px-4 rounded-b-[0px]"
         >
           {/* Background with Spline */}
-          <div className="absolute inset-0 z-0 flex justify-end items-center">
-            <div className="absolute inset-0 bg-black z-0" />
-            <div className="w-[100vw] h-[100vh] z-10">
-              <iframe
-                src="https://my.spline.design/untitled-n5pwkJkhyJk8rt6sKEeWfUpQ/"
-                frameBorder="0"
-                width="150%"
-                height="150%"
-                className="w-full h-full"
-              ></iframe>
-            </div>
-          </div>
+         <div className="absolute inset-0 z-0 flex justify-end items-center">
+      <div className="absolute inset-0 bg-black z-0" />
+      <div className="w-[100vw] h-[100vh] z-10">
+        <Spline scene="https://prod.spline.design/n5pwkJkhyJk8rt6sKEeWfUpQ/scene.splinecode" />
+      </div>
+    </div>
 
           {/* Centered Hero Content */}
           <div className="relative z-10 w-full max-w-7xl mx-auto flex px-4 sm:px-6 lg:px-8">
